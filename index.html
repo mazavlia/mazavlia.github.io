@@ -1117,26 +1117,224 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <div id="form-status" class="form-status"></div>
-                    <form id="contactForm" action="https://formspree.io/f/xdklbavv" method="POST">
-                        <input type="hidden" name="_subject" value="New message from portfolio contact form">
-                        <input type="hidden" name="_replyto" value="mazavlia@mail.ru">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                <div class="contact-form resume-preview-section">
+                    <h3><i class="fas fa-file-alt"></i> Предпросмотр резюме</h3>
+                    <p>Нажмите кнопку ниже, чтобы открыть полную версию в новой вкладке.</p>
+
+                    <div class="resume-preview-card">
+                        <!-- Основная информация -->
+                        <div class="resume-section-preview">
+                            <h5><i class="fas fa-user"></i> Основное</h5>
+                            <p><strong>Имя:</strong> Марина Запорожец</p>
+                            <p><strong>Специализация:</strong> Data Engineer & DevOps Specialist</p>
+                            <p><strong>Готова к:</strong> Удаленной работе, переезду</p>
+                            <p><strong>Зарплата:</strong> от 150 000 ₽ на руки</p>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+
+                        <!-- Experience Preview -->
+                        <div class="resume-section-preview">
+                            <h5><i class="fas fa-briefcase"></i> Опыт работы</h5>
+                            <div class="job-preview">
+                                <div class="job-title-preview">Data Engineer</div>
+                                <div class="job-company-preview">ООО "1Т"</div>
+                                <div class="job-date-preview">Июнь 2023 — Август 2025</div>
+                                <div class="job-tags-preview">
+                                    <span class="preview-tag">Airflow</span>
+                                    <span class="preview-tag">Docker</span>
+                                    <span class="preview-tag">Kubernetes</span>
+                                    <span class="preview-tag">PostgreSQL</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
+
+                        <!-- Skills Preview -->
+                        <div class="resume-section-preview">
+                            <h5><i class="fas fa-code"></i> Ключевые навыки</h5>
+                            <div class="skills-preview-tags">
+                                <span class="preview-skill-tag">Python</span>
+                                <span class="preview-skill-tag">Airflow</span>
+                                <span class="preview-skill-tag">Spark</span>
+                                <span class="preview-skill-tag">CI/CD</span>
+                                <span class="preview-skill-tag">Kafka</span>
+                                <span class="preview-skill-tag">FastAPI</span>
+                                <span class="preview-skill-tag">Prometheus</span>
+                                <span class="preview-skill-tag">ClickHouse</span>
+                            </div>
                         </div>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
+
+                        <!-- Education Preview -->
+                        <div class="resume-section-preview">
+                            <h5><i class="fas fa-graduation-cap"></i> Образование</h5>
+                            <div class="edu-preview">
+                                <div class="edu-title-preview">Магистратура</div>
+                                <div class="edu-university-preview">Тюменский индустриальный университет</div>
+                                <div class="edu-date-preview">До 2027</div>
+                            </div>
+                            <div class="edu-preview">
+                                <div class="edu-title-preview">Бакалавриат</div>
+                                <div class="edu-university-preview">Академия труда и соц. отношений</div>
+                                <div class="edu-date-preview">2024</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-preview-cta">
+                        <a href="./resume.html" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Открыть полное резюме</a>
+                        <a href="mailto:mazavlia@mail.ru" class="btn btn-outline"><i class="fas fa-envelope"></i> Написать на почту</a>
+                    </div>
                 </div>
+
+                <style>
+                .resume-preview-section {
+                    background: rgba(0, 0, 0, 0.2);
+                    padding: 30px;
+                    border-radius: 15px;
+                }
+
+                .resume-preview-card {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 15px;
+                    padding: 25px;
+                    margin-top: 20px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+
+                /* Section styling */
+                .resume-section-preview {
+                    margin-bottom: 25px;
+                }
+
+                .resume-section-preview h5 {
+                    color: #4ecdc4;
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 1.1rem;
+                }
+
+                /* Job Preview */
+                .job-preview {
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 15px;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+                }
+
+                .job-title-preview {
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 5px;
+                }
+
+                .job-company-preview {
+                    font-size: 0.9rem;
+                    opacity: 0.9;
+                    margin-bottom: 5px;
+                }
+
+                .job-date-preview {
+                    font-size: 0.85rem;
+                    opacity: 0.7;
+                    margin-bottom: 10px;
+                }
+
+                .job-tags-preview {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                }
+
+                .preview-tag {
+                    background: rgba(78, 205, 196, 0.2);
+                    padding: 4px 10px;
+                    border-radius: 50px;
+                    font-size: 0.75rem;
+                    color: #4ecdc4;
+                }
+
+                /* Skills Preview */
+                .skills-preview-tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    margin-top: 10px;
+                }
+
+                .preview-skill-tag {
+                    background: rgba(78, 205, 196, 0.2);
+                    padding: 6px 12px;
+                    border-radius: 50px;
+                    font-size: 0.8rem;
+                    color: #4ecdc4;
+                    font-weight: 500;
+                }
+
+                /* Education Preview */
+                .edu-preview {
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 12px;
+                    border-radius: 8px;
+                    margin-bottom: 12px;
+                }
+
+                .edu-title-preview {
+                    font-weight: 600;
+                    color: #fff;
+                    font-size: 0.95rem;
+                }
+
+                .edu-university-preview {
+                    font-size: 0.85rem;
+                    opacity: 0.9;
+                }
+
+                .edu-date-preview {
+                    font-size: 0.8rem;
+                    opacity: 0.7;
+                    font-style: italic;
+                }
+
+                /* CTA Buttons */
+                .resume-preview-cta {
+                    display: flex;
+                    gap: 15px;
+                    flex-wrap: wrap;
+                    margin-top: 30px;
+                    justify-content: center;
+                }
+
+                @media (max-width: 768px) {
+                    .resume-preview-cta {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .resume-preview-cta .btn {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+                </style>
+<!--                <div class="contact-form">-->
+<!--                    <div id="form-status" class="form-status"></div>-->
+<!--                    <form id="contactForm" action="https://formspree.io/f/xdklbavv" method="POST">-->
+<!--                        <input type="hidden" name="_subject" value="New message from portfolio contact form">-->
+<!--                        <input type="hidden" name="_replyto" value="mazavlia@mail.ru">-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="name">Name</label>-->
+<!--                            <input type="text" id="name" name="name" required>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="email">Email</label>-->
+<!--                            <input type="email" id="email" name="email" required>-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <label for="message">Message</label>-->
+<!--                            <textarea id="message" name="message" required></textarea>-->
+<!--                        </div>-->
+<!--                        <button type="submit" class="btn">Send Message</button>-->
+<!--                    </form>-->
+<!--                </div>-->
             </div>
         </div>
     </section>
