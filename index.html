@@ -1117,9 +1117,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-form resume-preview-section">
-                    <h3><i class="fas fa-file-alt"></i> Предпросмотр резюме</h3>
-                    <p>Нажмите кнопку ниже, чтобы открыть полную версию в новой вкладке.</p>
+                <div class="contact-form resume-section">
+                    <h3><i class="fas fa-file-alt"></i> Резюме</h3>
+
+                    <div class="resume-cta-buttons">
+                        <a href="./resume.html" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Открыть полное резюме</a>
+                    </div>
 
                     <div class="resume-preview-card">
                         <!-- Основная информация -->
@@ -1178,11 +1181,142 @@
                         </div>
                     </div>
 
-                    <div class="resume-preview-cta">
-                        <a href="./resume.html" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Открыть полное резюме</a>
+                    <div class="resume-contact-cta">
                         <a href="mailto:mazavlia@mail.ru" class="btn btn-outline"><i class="fas fa-envelope"></i> Написать на почту</a>
                     </div>
                 </div>
+
+                <style>
+                .resume-section {
+                    background: rgba(0, 0, 0, 0.2);
+                    padding: 30px;
+                    border-radius: 15px;
+                }
+
+                .resume-cta-buttons {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+
+                .resume-preview-card {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 15px;
+                    padding: 25px;
+                    margin: 30px 0;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+
+                /* Section styling */
+                .resume-section-preview {
+                    margin-bottom: 25px;
+                }
+
+                .resume-section-preview h5 {
+                    color: #4ecdc4;
+                    margin-bottom: 15px;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 1.1rem;
+                }
+
+                /* Job Preview */
+                .job-preview {
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 15px;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+                }
+
+                .job-title-preview {
+                    font-weight: 600;
+                    color: #fff;
+                    margin-bottom: 5px;
+                }
+
+                .job-company-preview {
+                    font-size: 0.9rem;
+                    opacity: 0.9;
+                    margin-bottom: 5px;
+                }
+
+                .job-date-preview {
+                    font-size: 0.85rem;
+                    opacity: 0.7;
+                    margin-bottom: 10px;
+                }
+
+                .job-tags-preview {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                }
+
+                .preview-tag {
+                    background: rgba(78, 205, 196, 0.2);
+                    padding: 4px 10px;
+                    border-radius: 50px;
+                    font-size: 0.75rem;
+                    color: #4ecdc4;
+                }
+
+                /* Skills Preview */
+                .skills-preview-tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    margin-top: 10px;
+                }
+
+                .preview-skill-tag {
+                    background: rgba(78, 205, 196, 0.2);
+                    padding: 6px 12px;
+                    border-radius: 50px;
+                    font-size: 0.8rem;
+                    color: #4ecdc4;
+                    font-weight: 500;
+                }
+
+                /* Education Preview */
+                .edu-preview {
+                    background: rgba(255, 255, 255, 0.05);
+                    padding: 12px;
+                    border-radius: 8px;
+                    margin-bottom: 12px;
+                }
+
+                .edu-title-preview {
+                    font-weight: 600;
+                    color: #fff;
+                    font-size: 0.95rem;
+                }
+
+                .edu-university-preview {
+                    font-size: 0.85rem;
+                    opacity: 0.9;
+                }
+
+                .edu-date-preview {
+                    font-size: 0.8rem;
+                    opacity: 0.7;
+                    font-style: italic;
+                }
+
+                /* Contact CTA */
+                .resume-contact-cta {
+                    text-align: center;
+                    margin-top: 30px;
+                }
+
+                @media (max-width: 768px) {
+                    .resume-contact-cta .btn,
+                    .resume-cta-buttons .btn {
+                        width: 100%;
+                        text-align: center;
+                        margin: 10px 0;
+                    }
+                }
+                </style>
 
                 <style>
                 .resume-preview-section {
