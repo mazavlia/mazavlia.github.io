@@ -207,31 +207,15 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* Стили для горизонтальной галереи сертификатов */
+        /* Стили для галереи сертификатов — БЕЗ СКРОЛЛА */
         .certificates-horizontal {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
-            flex-wrap: nowrap;
-            overflow-x: auto;
+            flex-wrap: wrap; /* Разрешаем перенос на новую строку */
             padding: 20px 0;
-            scrollbar-width: thin;
-            scrollbar-color: #4ecdc4 rgba(255,255,255,0.1);
-        }
-
-        .certificates-horizontal::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .certificates-horizontal::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.05);
-            border-radius: 4px;
-        }
-
-        .certificates-horizontal::-webkit-scrollbar-thumb {
-            background: #4ecdc4;
-            border-radius: 4px;
+            /* УДАЛЕНО: overflow-x, scrollbar-width и все ::-webkit-scrollbar стили */
         }
 
         .certificate-item-horizontal {
@@ -256,9 +240,20 @@
             color: inherit;
         }
 
-        .certificate-img-horizontal {
+        /* Уменьшенный размер иконок + горизонтальная ориентация для Дипломов */
+        .certificate-img-horizontal.landscape {
             width: 100%;
-            height: 220px; /* Фиксированная высота */
+            height: 120px; /* Уменьшенная высота для горизонтальных */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+        }
+
+        /* Уменьшенный размер иконок + вертикальная ориентация для Других документов */
+        .certificate-img-horizontal.portrait {
+            width: 100%;
+            height: 180px; /* Высота больше ширины для вертикальных */
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 10px;
@@ -282,8 +277,11 @@
             .certificate-item-horizontal {
                 width: 160px;
             }
-            .certificate-img-horizontal {
-                height: 200px;
+            .certificate-img-horizontal.landscape {
+                height: 110px;
+            }
+            .certificate-img-horizontal.portrait {
+                height: 170px;
             }
         }
 
@@ -301,8 +299,11 @@
             .certificate-item-horizontal {
                 width: 140px;
             }
-            .certificate-img-horizontal {
-                height: 180px;
+            .certificate-img-horizontal.landscape {
+                height: 100px;
+            }
+            .certificate-img-horizontal.portrait {
+                height: 160px;
             }
             .certificates-horizontal {
                 gap: 15px;
@@ -314,8 +315,11 @@
             .certificate-item-horizontal {
                 width: 120px;
             }
-            .certificate-img-horizontal {
-                height: 160px;
+            .certificate-img-horizontal.landscape {
+                height: 90px;
+            }
+            .certificate-img-horizontal.portrait {
+                height: 150px;
             }
             .certificates-horizontal {
                 gap: 10px;
@@ -527,31 +531,31 @@
             <div class="certificates-horizontal">
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/ATiSO.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/ATiSO.jpg" alt="Диплом АТиСО" class="certificate-img-horizontal">
+                        <img src="./pictures/ATiSO.jpg" alt="Диплом АТиСО" class="certificate-img-horizontal landscape">
                         <div class="certificate-caption-horizontal">Академия труда и соц. отношений</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/data_engineer.jpeg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/data_engineer.jpeg" alt="Сертификат Data Engineer" class="certificate-img-horizontal">
+                        <img src="./pictures/data_engineer.jpeg" alt="Сертификат Data Engineer" class="certificate-img-horizontal landscape">
                         <div class="certificate-caption-horizontal">Data Engineer — ООО "1Т"</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/МГТУ_Баумана.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/МГТУ_Баумана.jpg" alt="Сертификат МГТУ им. Баумана" class="certificate-img-horizontal">
+                        <img src="./pictures/МГТУ_Баумана.jpg" alt="Сертификат МГТУ им. Баумана" class="certificate-img-horizontal landscape">
                         <div class="certificate-caption-horizontal">Data Science — МГТУ им. Баумана</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/Cert_DO.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/Cert_DO.jpg" alt="Сертификат DevOps" class="certificate-img-horizontal">
+                        <img src="./pictures/Cert_DO.jpg" alt="Сертификат DevOps" class="certificate-img-horizontal landscape">
                         <div class="certificate-caption-horizontal">DevOps — ООО "1Т"</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/tech_analyst.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/tech_analyst.jpg" alt="Сертификат Технический аналитик" class="certificate-img-horizontal">
+                        <img src="./pictures/tech_analyst.jpg" alt="Сертификат Технический аналитик" class="certificate-img-horizontal landscape">
                         <div class="certificate-caption-horizontal">Технический аналитик — ООО "1Т"</div>
                     </a>
                 </div>
@@ -564,13 +568,13 @@
             <div class="certificates-horizontal">
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/Certificate.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/Certificate.jpg" alt="Сертификат" class="certificate-img-horizontal">
-                        <div class="certificate-caption-horizontal">Диплом финалиста конкурса мэра Москвы "Лидеры цифровой трансформации"</div>
+                        <img src="./pictures/Certificate.jpg" alt="Сертификат" class="certificate-img-horizontal portrait">
+                        <div class="certificate-caption-horizontal">Диплом финалиста конкурса "ЛЦТ""</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/РГ_Неделя_19.06.24.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/РГ_Неделя_19.06.24.jpg" alt="РГ Неделя" class="certificate-img-horizontal">
+                        <img src="./pictures/РГ_Неделя_19.06.24.jpg" alt="РГ Неделя" class="certificate-img-horizontal portrait">
                         <div class="certificate-caption-horizontal">Российская газета, "Неделя", 19.06.2024 г.</div>
                     </a>
                 </div>
