@@ -87,7 +87,6 @@
             text-align: center;
             margin-bottom: 40px;
             padding-bottom: 30px;
-            border-bottom: 2px solid #4ecdc4;
         }
         .header h1 {
             font-size: 2.5rem;
@@ -207,6 +206,87 @@
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
+
+        /* Стили для горизонтальной галереи сертификатов */
+        .certificates-horizontal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px 0;
+            scrollbar-width: thin;
+            scrollbar-color: #4ecdc4 rgba(255,255,255,0.1);
+        }
+
+        .certificates-horizontal::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .certificates-horizontal::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+            border-radius: 4px;
+        }
+
+        .certificates-horizontal::-webkit-scrollbar-thumb {
+            background: #4ecdc4;
+            border-radius: 4px;
+        }
+
+        .certificate-item-horizontal {
+            flex: 0 0 auto;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+            width: 180px; /* Фиксированная ширина */
+        }
+
+        .certificate-item-horizontal:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3);
+        }
+
+        .certificate-link-horizontal {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .certificate-img-horizontal {
+            width: 100%;
+            height: 220px; /* Фиксированная высота */
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+        }
+
+        .certificate-caption-horizontal {
+            font-size: 0.8rem;
+            color: #4ecdc4;
+            font-weight: 500;
+            line-height: 1.3;
+            min-height: 40px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Адаптивность для галереи */
+        @media (max-width: 1024px) {
+            .certificate-item-horizontal {
+                width: 160px;
+            }
+            .certificate-img-horizontal {
+                height: 200px;
+            }
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 25px;
@@ -218,6 +298,28 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            .certificate-item-horizontal {
+                width: 140px;
+            }
+            .certificate-img-horizontal {
+                height: 180px;
+            }
+            .certificates-horizontal {
+                gap: 15px;
+                padding: 15px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .certificate-item-horizontal {
+                width: 120px;
+            }
+            .certificate-img-horizontal {
+                height: 160px;
+            }
+            .certificates-horizontal {
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -226,7 +328,7 @@
         <div class="header">
             <div class="profile-header">
                 <div class="profile-image-container">
-                    <img src="./pict/photo_2025-09-09_18-24-59.jpg" alt="Marina Zaporozhets" class="profile-header-img">
+                    <img src="./pictures/photo_2025-09-09_18-24-59.jpg" alt="Марина Запорожец" class="profile-header-img">
                 </div>
                 <div class="header-text">
                     <h1>Марина Запорожец</h1>
@@ -236,7 +338,7 @@
                         <a href="tel:+79512692249"><i class="fas fa-phone"></i> +7 (951) 269-22-49</a>
                         <a href="https://t.me/mazavlia" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
                         <a href="https://github.com/mazavlia" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://mazavlia.github.io" target="_blank"><i class="fab fa-github"></i> Portfolio</a>
+                        <a href="https://mazavlia.github.io" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
                     </div>
                 </div>
             </div>
@@ -419,6 +521,62 @@
             </div>
         </div>
 
+        <!-- 📜 Дипломы и сертификаты -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Дипломы и сертификаты</h2>
+            <div class="certificates-horizontal">
+                <div class="certificate-item-horizontal">
+                    <a href="./pictures/ATiSO.jpg" target="_blank" class="certificate-link-horizontal">
+                        <img src="./pictures/ATiSO.jpg" alt="Диплом АТиСО" class="certificate-img-horizontal">
+                        <div class="certificate-caption-horizontal">Академия труда и соц. отношений</div>
+                    </a>
+                </div>
+                <div class="certificate-item-horizontal">
+                    <a href="./pictures/data_engineer.jpeg" target="_blank" class="certificate-link-horizontal">
+                        <img src="./pictures/data_engineer.jpeg" alt="Сертификат Data Engineer" class="certificate-img-horizontal">
+                        <div class="certificate-caption-horizontal">Data Engineer — ООО "1Т"</div>
+                    </a>
+                </div>
+                <div class="certificate-item-horizontal">
+                    <a href="./pictures/МГТУ_Баумана.jpg" target="_blank" class="certificate-link-horizontal">
+                        <img src="./pictures/МГТУ_Баумана.jpg" alt="Сертификат МГТУ им. Баумана" class="certificate-img-horizontal">
+                        <div class="certificate-caption-horizontal">Data Science — МГТУ им. Баумана</div>
+                    </a>
+                </div>
+                <div class="certificate-item-horizontal">
+                    <a href="./pictures/Cert_DO.jpg" target="_blank" class="certificate-link-horizontal">
+                        <img src="./pictures/Cert_DO.jpg" alt="Сертификат DevOps" class="certificate-img-horizontal">
+                        <div class="certificate-caption-horizontal">DevOps — ООО "1Т"</div>
+                    </a>
+                </div>
+                <div class="certificate-item-horizontal">
+                    <a href="./pictures/tech_analyst.jpg" target="_blank" class="certificate-link-horizontal">
+                        <img src="./pictures/tech_analyst.jpg" alt="Сертификат Технический аналитик" class="certificate-img-horizontal">
+                        <div class="certificate-caption-horizontal">Технический аналитик — ООО "1Т"</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 📄 Другие документы -->
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> Другие документы</h2>
+            <div class="certificates-horizontal">
+                <div class="certificate-item-horizontal">
+                    <a href="./pictures/Certificate.jpg" target="_blank" class="certificate-link-horizontal">
+                        <img src="./pictures/Certificate.jpg" alt="Сертификат" class="certificate-img-horizontal">
+                        <div class="certificate-caption-horizontal">Диплом финалиста конкурса мэра Москвы "Лидеры цифровой трансформации"</div>
+                    </a>
+                </div>
+                <div class="certificate-item-horizontal">
+                    <a href="./pictures/РГ_Неделя_19.06.24.jpg" target="_blank" class="certificate-link-horizontal">
+                        <img src="./pictures/РГ_Неделя_19.06.24.jpg" alt="РГ Неделя" class="certificate-img-horizontal">
+                        <div class="certificate-caption-horizontal">Российская газета, "Неделя", 19.06.2024 г.</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div style="text-align: center; margin-top: 40px;">
             <a href="mailto:mazavlia@mail.ru" class="btn"><i class="fas fa-envelope"></i> Связаться по email</a>
             <p id="resume-update-date" style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Резюме обновлено <span id="current-date">...</span></p>
@@ -430,8 +588,7 @@
                     const options = {
                         year: 'numeric',
                         month: 'long',
-                        day: 'numeric',
-                        // timeZone: 'Europe/Moscow' // Устанавливаем московское время
+                        day: 'numeric'
                     };
                     return now.toLocaleDateString('ru-RU', options);
                 }
