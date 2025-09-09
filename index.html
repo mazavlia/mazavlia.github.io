@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marina Zaporozhets - Data Engineer Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -80,7 +79,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            padding-top: 100px; /* Increased padding to lower the profile image */
+            padding-top: 100px;
         }
 
         .hero::before {
@@ -163,8 +162,6 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
             margin: 10px;
-            border: none;
-            cursor: pointer;
         }
 
         .btn:hover {
@@ -178,80 +175,310 @@
             color: #4ecdc4;
         }
 
-        /* Data Engineering Animation */
-        .data-animation {
+        /* Enhanced Data Pipeline Animation */
+        .data-pipeline-animation {
             margin: 40px auto;
             width: 100%;
-            max-width: 600px;
-            height: 200px;
+            max-width: 1000px;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 15px;
             position: relative;
-        }
-
-        .server-rack {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 150px;
-            background: linear-gradient(to bottom, #2c3e50, #1a2530);
-            border-radius: 10px 10px 0 0;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px;
-        }
-
-        .server-blade {
-            width: 15px;
-            height: 130px;
-            background: linear-gradient(to bottom, #34495e, #2c3e50);
-            border-radius: 3px;
-            position: relative;
+            font-family: 'JetBrains Mono', monospace;
             overflow: hidden;
         }
 
-        .server-activity {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: linear-gradient(to top, #4ecdc4, #2a9d8f);
-            animation: serverPulse 3s infinite;
+        .pipeline-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            gap: 15px;
+            position: relative;
+            padding: 20px 0;
         }
 
-        @keyframes serverPulse {
-            0% { height: 10%; opacity: 0.5; }
-            50% { height: 90%; opacity: 1; }
-            100% { height: 10%; opacity: 0.5; }
+        .pipeline-stage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            padding: 20px 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+            z-index: 2;
         }
 
-        .server-blade:nth-child(1) .server-activity { animation-delay: 0s; }
-        .server-blade:nth-child(2) .server-activity { animation-delay: 0.5s; }
-        .server-blade:nth-child(3) .server-activity { animation-delay: 1s; }
-        .server-blade:nth-child(4) .server-activity { animation-delay: 1.5s; }
-        .server-blade:nth-child(5) .server-activity { animation-delay: 2s; }
-
-        .data-flow {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .pipeline-stage:hover {
+            background: rgba(78, 205, 196, 0.25);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.3);
         }
 
-        .data-node {
-            position: absolute;
-            width: 12px;
-            height: 12px;
+        .pipeline-stage .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .pipeline-stage.success .icon {
+            color: #4ecdc4;
+            transform: scale(1.1);
+        }
+
+        .pipeline-stage .label {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .pipeline-stage .status {
+            width: 16px;
+            height: 16px;
             background: #ff6b6b;
             border-radius: 50%;
-            opacity: 0.7;
+            margin: 8px 0;
+            animation: pulse 2s infinite;
         }
 
-        .data-connection {
+        .pipeline-stage.success .status {
+            background: #4ecdc4;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+            100% { opacity: 0.6; transform: scale(1); }
+        }
+
+        /* Animated Flow Arrows */
+        .pipeline-connector {
+            position: relative;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(to right, #4ecdc4, #2a9d8f);
+            border-radius: 2px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .pipeline-connector::after {
+            content: '→';
             position: absolute;
-            height: 2px;
-            background: linear-gradient(to right, #4ecdc4, transparent);
-            transform-origin: left center;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #4ecdc4;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .data-particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            z-index: 3;
+            opacity: 0.8;
+        }
+
+        .dag-nodes {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 12px;
+            width: 100%;
+        }
+
+        .dag-node {
+            padding: 4px 10px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .dag-node.active {
+            background: #4ecdc4;
+            color: #000;
+            font-weight: 600;
+            transform: scale(1.05);
+        }
+
+        .cpu-bars {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 12px;
+            height: 50px;
+            align-items: flex-end;
+            gap: 4px;
+        }
+
+        .cpu-bar {
+            width: 12px;
+            background: #ff6b6b;
+            border-radius: 3px 3px 0 0;
+            animation: cpuLoad 2s infinite;
+            height: var(--height);
+        }
+
+        @keyframes cpuLoad {
+            0% { height: var(--height); }
+            50% { height: calc(var(--height) * 1.5); }
+            100% { height: var(--height); }
+        }
+
+        .rows-counter {
+            font-size: 0.9rem;
+            margin-top: 8px;
+            font-weight: 600;
+            color: #4ecdc4;
+        }
+
+        .pipeline-monitor {
+            margin-top: 25px;
+            padding: 15px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .monitor-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4ecdc4;
+            font-size: 1.1rem;
+        }
+
+        .metrics {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .metric {
+            background: rgba(255,255,255,0.1);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            min-width: 120px;
+        }
+
+        .pipeline-cicd {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .cicd-pipeline {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.05);
+            padding: 12px;
+            border-radius: 12px;
+            gap: 8px;
+        }
+
+        .cicd-stage {
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            opacity: 0.7;
+            transform: scale(0.95);
+        }
+
+        .cicd-stage.active {
+            background: #4ecdc4;
+            color: #000;
+            font-weight: 600;
+            transform: scale(1);
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+        }
+
+        .pipeline-alert {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            box-shadow: 0 5px 20px rgba(231, 76, 60, 0.4);
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.5s ease;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .pipeline-alert.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .alert-icon {
+            font-size: 1.3rem;
+        }
+
+        .alert-action {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            animation: blink 1s infinite;
+            font-weight: 600;
+        }
+
+        .pipeline-success {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
+            opacity: 0;
+            transform: translateX(30px);
+            transition: all 0.5s ease;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .pipeline-success.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .success-icon {
+            font-size: 1.3rem;
+        }
+
+        .success-action {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            font-weight: 600;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.5; }
         }
 
         /* Sections */
@@ -419,6 +646,41 @@
             gap: 5px;
         }
 
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
         /* Contact Section */
         #contact {
             background: rgba(0, 0, 0, 0.3);
@@ -462,17 +724,6 @@
             font-size: 1.2rem;
         }
 
-        .contact-link {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-link:hover {
-            color: #4ecdc4;
-            text-decoration: underline;
-        }
-
         .contact-form {
             flex: 1;
             min-width: 300px;
@@ -502,63 +753,6 @@
         .form-group textarea {
             min-height: 150px;
             resize: vertical;
-        }
-
-        /* Form Status Messages */
-        .form-status {
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: none;
-        }
-
-        .form-status.success {
-            background-color: rgba(46, 204, 113, 0.2);
-            border: 1px solid #2ecc71;
-            color: #2ecc71;
-            display: block;
-        }
-
-        .form-status.error {
-            background-color: rgba(231, 76, 60, 0.2);
-            border: 1px solid #e74c3c;
-            color: #e74c3c;
-            display: block;
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 80px 0;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
         }
 
         /* Footer */
@@ -596,7 +790,7 @@
         /* Responsive */
         @media (max-width: 768px) {
             .hero {
-                padding-top: 120px; /* Even more padding on mobile */
+                padding-top: 120px;
             }
 
             .hero h1 {
@@ -621,6 +815,29 @@
             }
 
             .section-title {
+                font-size: 2rem;
+            }
+
+            .data-pipeline-animation {
+                padding: 20px 10px;
+            }
+
+            .pipeline-container {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .pipeline-stage {
+                width: 140px;
+                padding: 15px 8px;
+            }
+
+            .pipeline-connector {
+                width: 40px;
+                height: 3px;
+            }
+
+            .pipeline-stage .icon {
                 font-size: 2rem;
             }
         }
@@ -649,6 +866,74 @@
             <h1>Marina Zaporozhets</h1>
             <div class="typing-text" id="typing"></div>
             <p>Data Engineer & DevOps Specialist</p>
+
+            <div class="data-pipeline-animation" id="pipelineAnim">
+                <div class="pipeline-container" id="pipelineContainer">
+                    <div class="pipeline-stage source" data-name="PostgreSQL">
+                        <div class="icon"><i class="fas fa-database"></i></div>
+                        <div class="label">Source</div>
+                        <div class="status"></div>
+                    </div>
+                    <div class="pipeline-connector" id="connector1"></div>
+                    <div class="pipeline-stage airflow" data-name="Airflow DAG">
+                        <div class="icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="label">Orchestrate</div>
+                        <div class="status"></div>
+                        <div class="dag-nodes">
+                            <div class="dag-node" id="node1">Extract</div>
+                            <div class="dag-node" id="node2">Transform</div>
+                            <div class="dag-node" id="node3">Load</div>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector" id="connector2"></div>
+                    <div class="pipeline-stage spark" data-name="Spark Job">
+                        <div class="icon"><i class="fas fa-fire"></i></div>
+                        <div class="label">Process</div>
+                        <div class="status"></div>
+                        <div class="cpu-bars">
+                            <div class="cpu-bar" style="--height: 30%;"></div>
+                            <div class="cpu-bar" style="--height: 70%;"></div>
+                            <div class="cpu-bar" style="--height: 50%;"></div>
+                        </div>
+                    </div>
+                    <div class="pipeline-connector" id="connector3"></div>
+                    <div class="pipeline-stage warehouse" data-name="ClickHouse">
+                        <div class="icon"><i class="fas fa-warehouse"></i></div>
+                        <div class="label">Warehouse</div>
+                        <div class="status"></div>
+                        <div class="rows-counter">0 rows</div>
+                    </div>
+                </div>
+
+                <div class="pipeline-monitor">
+                    <div class="monitor-header">Live System Metrics</div>
+                    <div class="metrics">
+                        <div class="metric">Latency: <span id="latency">120ms</span></div>
+                        <div class="metric">Throughput: <span id="throughput">450 msg/s</span></div>
+                        <div class="metric">Errors: <span id="errors">0</span></div>
+                    </div>
+                </div>
+
+                <div class="pipeline-cicd">
+                    <div class="cicd-pipeline">
+                        <div class="cicd-stage" id="git">git push</div>
+                        <div class="cicd-stage" id="build">build image</div>
+                        <div class="cicd-stage" id="deploy">deploy</div>
+                    </div>
+                </div>
+
+                <div class="pipeline-alert" id="alert">
+                    <div class="alert-icon">⚠️</div>
+                    <div class="alert-text"><b>Failed!</b></div>
+                    <div class="alert-action">Auto-Rollback...</div>
+                </div>
+
+                <div class="pipeline-success" id="success">
+                    <div class="success-icon">✅</div>
+                    <div class="success-text"><b>Success!</b></div>
+                    <div class="success-action">Data loaded to warehouse</div>
+                </div>
+            </div>
 
             <div>
                 <a href="https://github.com/mazavlia" class="btn"><i class="fab fa-github"></i> GitHub Profile</a>
@@ -942,52 +1227,161 @@
 
         observer.observe(document.querySelector('.stats'));
 
-        // Form submission handling
-        const form = document.getElementById('contactForm');
-        const formStatus = document.getElementById('form-status');
+        // Enhanced Data pipeline animation
+        function animatePipeline() {
+            const stages = document.querySelectorAll('.pipeline-stage');
+            const dagNodes = document.querySelectorAll('.dag-node');
+            const cpuBars = document.querySelectorAll('.cpu-bar');
+            const rowsCounter = document.querySelector('.rows-counter');
+            const latency = document.getElementById('latency');
+            const throughput = document.getElementById('throughput');
+            const errors = document.getElementById('errors');
+            const cicdStages = document.querySelectorAll('.cicd-stage');
+            const alert = document.getElementById('alert');
+            const success = document.getElementById('success');
+            const connectors = document.querySelectorAll('.pipeline-connector');
 
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
+            let rowCount = 0;
+            let errorCount = 0;
 
-            // Change button text to indicate loading
-            const submitButton = form.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-
-            try {
-                const formData = new FormData(form);
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    // Show success message
-                    formStatus.textContent = 'Thank you for your message! I will get back to you soon.';
-                    formStatus.classList.add('success');
-                    form.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                // Show error message
-                formStatus.textContent = 'Oops! There was a problem sending your message. Please try again.';
-                formStatus.classList.add('error');
-            } finally {
-                // Restore button text
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-
-                // Hide status message after 5 seconds
-                setTimeout(() => {
-                    formStatus.textContent = '';
-                    formStatus.classList.remove('success', 'error');
-                }, 5000);
+            function resetPipeline() {
+                stages.forEach(s => s.classList.remove('success'));
+                dagNodes.forEach(n => n.classList.remove('active'));
+                cicdStages.forEach(s => s.classList.remove('active'));
+                alert.classList.remove('show');
+                success.classList.remove('show');
             }
+
+            function simulateFailure() {
+                alert.classList.add('show');
+                errors.textContent = ++errorCount;
+                setTimeout(() => {
+                    alert.classList.remove('show');
+                    // Auto-recovery
+                    runPipeline();
+                }, 3000);
+            }
+
+            function showSuccess() {
+                success.classList.add('show');
+                setTimeout(() => {
+                    success.classList.remove('show');
+                }, 2500);
+            }
+
+            function createDataParticle(connectorIndex) {
+                const connector = document.querySelectorAll('.pipeline-connector')[connectorIndex];
+                if (!connector) return;
+
+                const particle = document.createElement('div');
+                particle.classList.add('data-particle');
+                particle.style.backgroundColor = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4'][Math.floor(Math.random() * 4)];
+
+                particle.style.left = '0px';
+                particle.style.top = '50%';
+                particle.style.transform = 'translateY(-50%)';
+
+                connector.appendChild(particle);
+
+                let position = 0;
+                const interval = setInterval(() => {
+                    position += 2;
+                    particle.style.left = position + 'px';
+
+                    if (position > 60) {
+                        clearInterval(interval);
+                        particle.remove();
+                    }
+                }, 20);
+            }
+
+            function animateCI() {
+                // Reset all CI/CD stages
+                cicdStages.forEach(stage => stage.classList.remove('active'));
+
+                // Animate sequentially
+                setTimeout(() => {
+                    cicdStages[0].classList.add('active');
+                    setTimeout(() => {
+                        cicdStages[1].classList.add('active');
+                        setTimeout(() => {
+                            cicdStages[2].classList.add('active');
+                        }, 600);
+                    }, 600);
+                }, 300);
+            }
+
+            function runPipeline() {
+                resetPipeline();
+
+                // Source
+                setTimeout(() => {
+                    stages[0].classList.add('success');
+                    createDataParticle(0);
+                }, 500);
+
+                // Airflow
+                setTimeout(() => {
+                    stages[1].classList.add('success');
+                    dagNodes[0].classList.add('active');
+                    createDataParticle(1);
+                }, 1000);
+
+                setTimeout(() => {
+                    dagNodes[1].classList.add('active');
+                }, 1500);
+
+                setTimeout(() => {
+                    dagNodes[2].classList.add('active');
+                }, 2000);
+
+                // Spark
+                setTimeout(() => {
+                    stages[2].classList.add('success');
+                    cpuBars.forEach(bar => {
+                        bar.style.setProperty('--height', Math.floor(30 + Math.random() * 60) + '%');
+                    });
+                    createDataParticle(2);
+                }, 2500);
+
+                // Warehouse
+                setTimeout(() => {
+                    stages[3].classList.add('success');
+                    rowCount += Math.floor(1000 + Math.random() * 5000);
+                    rowsCounter.textContent = rowCount.toLocaleString() + ' rows';
+                }, 3000);
+
+                // Metrics
+                latency.textContent = Math.floor(80 + Math.random() * 100) + 'ms';
+                throughput.textContent = Math.floor(300 + Math.random() * 400) + ' msg/s';
+
+                // CI/CD animation
+                if (Math.random() > 0.6) {
+                    setTimeout(animateCI, 3200);
+                }
+
+                // Random failure (20% chance)
+                if (Math.random() > 0.8) {
+                    setTimeout(simulateFailure, 4000);
+                } else {
+                    // Show success if no failure
+                    setTimeout(showSuccess, 4200);
+                }
+            }
+
+            // Run every 8 seconds
+            runPipeline();
+            setInterval(runPipeline, 8000);
+        }
+
+        // Start animation when page loads
+        setTimeout(animatePipeline, 2000);
+
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
         });
 
         // Smooth scrolling for navigation links
