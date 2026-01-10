@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме — Марина Запорожец</title>
+    <title>Resume — Marina Zaporozhets</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -28,14 +28,14 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             position: relative;
         }
-
+        
         /* Language switcher button */
         .language-switcher {
             position: absolute;
             top: 20px;
             right: 20px;
         }
-
+        
         .profile-header {
             display: flex;
             align-items: center;
@@ -75,7 +75,7 @@
             opacity: 0.9;
             margin-bottom: 20px;
         }
-        /* Адаптивность для мобильных устройств */
+        /* Responsive for mobile devices */
         @media (max-width: 768px) {
             .profile-header {
                 flex-direction: column;
@@ -224,7 +224,7 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* Стили для галереи сертификатов */
+        /* Certificates gallery - NO SCROLL */
         .certificates-horizontal {
             display: flex;
             justify-content: center;
@@ -342,20 +342,20 @@
 </head>
 <body>
     <div class="container">
-        <!-- Language switcher button with English flag -->
+        <!-- Language switcher -->
         <div class="language-switcher">
-            <a href="./resume_en.html">
-                <img src="https://img.shields.io/badge/-English-0052FF?logo=image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDI0IDE2Ij48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMTYiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNIDAsMCBIIDI0IFYgNi42IEggMCBWIDAiIGZpbGw9IiMyMDRiODciLz48cGF0aCBkPSJNIDAsOS40IEggMjQgVjE2IEggMCBaIiBmaWxsPSIjYzgyYzI4Ii8+PC9zdmc+&logoColor=white&style=for-the-badge&logoWidth=20&scale=1.2" alt="English" />
+            <a href="./resume.html">
+                <img src="https://img.shields.io/badge/-Русский-00A859?logo=image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDI0IDE2Ij48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMTYiIGZpbGw9IiNmZmYiLz48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iOCIgZmlsbD0iIzAwNjFlZiIvPjxyZWN0IHdpZHRoPSIyNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmYzZDA1Ii8+PC9zdmc+&logoColor=white&style=for-the-badge&logoWidth=20&scale=1.2" alt="Русский" />
             </a>
         </div>
-
+        
         <div class="header">
             <div class="profile-header">
                 <div class="profile-image-container">
-                    <img src="./pictures/profile.jpg" alt="Марина Запорожец" class="profile-header-img">
+                    <img src="./pictures/profile.jpg" alt="Marina Zaporozhets" class="profile-header-img">
                 </div>
                 <div class="header-text">
-                    <h1>Марина Запорожец</h1>
+                    <h1>Marina Zaporozhets</h1>
                     <p>Data Engineer & DevOps Specialist</p>
                     <div class="contact-info">
                         <a href="mailto:mazavlia@mail.ru"><i class="fas fa-envelope"></i> mazavlia@mail.ru</a>
@@ -369,31 +369,31 @@
         </div>
 
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-user"></i> Основная информация</h2>
-            <p><strong>Возраст:</strong> <span id="calculated-age-ru">...</span> лет</p>
-            <p><strong>Гражданство:</strong> Россия</p>
-            <p><strong>График работы:</strong> Полная занятость, Полный день, Гибкий график, Удалённая работа</p>
-            <p><strong>Желаемая зарплата:</strong> от 250 000 ₽ на руки</p>
+            <h2 class="section-title"><i class="fas fa-user"></i> Basic Information</h2>
+            <p><strong>Age:</strong> <span id="calculated-age-en">...</span> years</p>
+            <p><strong>Citizenship:</strong> Russia</p>
+            <p><strong>Work Schedule:</strong> Full-time, Full day, Flexible schedule, Remote work</p>
+            <p><strong>Expected Salary:</strong> from 250,000 ₽ net</p>
         </div>
 
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-briefcase"></i> Опыт работы</h2>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
 
             <div class="job">
                 <div class="job-header">
                     <div>
-                        <div class="job-title">Data Engineer / Разработчик BI-систем</div>
-                        <div class="job-company">Монетка ИТ</div>
+                        <div class="job-title">Data Engineer / BI Systems Developer</div>
+                        <div class="job-company">Monetka IT</div>
                     </div>
-                    <div class="job-date">Октябрь 2025 — настоящее время (4 месяца)</div>
+                    <div class="job-date">October 2025 — Present (4 months)</div>
                 </div>
                 <ul>
-                    <li>Спроектировала и внедрила end-to-end ETL/ELT-пайплайны, интегрирующие данные из Oracle DWH, Excel/CSV-файлов в ClickHouse</li>
-                    <li>Сократила время подготовки отчётов с нескольких часов до минут за счет автоматизации потоков данных</li>
-                    <li>Оптимизировала структуру БД ClickHouse с движками хранения (MergeTree, ReplacingMergeTree), партиционированием и проекциями, ускорив выполнение запросов в 3–5 раз</li>
-                    <li>Провела миграцию BI-отчётов из Qlik Sense в Apache Superset, снизив лицензионные расходы и ускорив вывод новых отчётов на 40%</li>
-                    <li>Построила систему оркестрации на базе Apache Airflow в docker-compose с поддержкой инкрементальной загрузки и retry-логикой, достигнув надежности доставки данных 99.9%</li>
-                    <li>Разработала сложные аналитические SQL-запросы с оконными функциями и CTE для дашбордов KPI в режиме near real-time</li>
+                    <li>Designed and implemented end-to-end ETL/ELT pipelines integrating data from Oracle DWH, Excel/CSV files into ClickHouse</li>
+                    <li>Reduced report preparation time from several hours to minutes by implementing automated data pipelines</li>
+                    <li>Optimized ClickHouse database structure with storage engines (MergeTree, ReplacingMergeTree), partitioning, and projections, improving query performance 3-5x</li>
+                    <li>Led BI migration from Qlik Sense to Apache Superset, maintaining business logic while reducing licensing costs and accelerating new report deployment by 40%</li>
+                    <li>Built Airflow orchestration system from scratch in docker-compose with incremental loading and retry logic, achieving 99.9% data delivery reliability</li>
+                    <li>Developed complex analytical SQL queries with window functions and CTE for near real-time KPI dashboards</li>
                 </ul>
             </div>
 
@@ -401,61 +401,61 @@
                 <div class="job-header">
                     <div>
                         <div class="job-title">Data Engineer</div>
-                        <div class="job-company">ООО "1Т" — data.1t.ru</div>
+                        <div class="job-company">OOO "1T" — data.1t.ru</div>
                     </div>
-                    <div class="job-date">Июнь 2023 — Август 2025 (2 года 3 месяца)</div>
+                    <div class="job-date">June 2023 — August 2025 (2 years 3 months)</div>
                 </div>
                 <ul>
-                    <li>Оптимизировала DWH архитектуру (PostgreSQL + ClickHouse), сократив время выполнения агрегирующих отчетов с 15 минут до 90 секунд (ускорение в 10 раз)</li>
-                    <li>Разработала и поддерживала 15+ DAG'ов в Apache Airflow с уровнем успешности 99.9% и автоматическими оповещениями в Telegram</li>
-                    <li>Построила CI/CD-пайплайн на GitLab CI, автоматизировав сборку Docker-образов, деплой в Kubernetes, бэкапы БД — устранила 85% ручных операций</li>
-                    <li>Внедрила real-time CDC-репликацию PostgreSQL → Kafka через Debezium, повысив актуальность данных в 5 раз</li>
-                    <li>Создала Python-парсеры для ETL с использованием Pandas, ускорив обработку сырых данных в 3 раза при снижении потребления RAM на 40%</li>
-                    <li>Интегрировала Hugging Face LLM в data-пайплайн через FastAPI, сократив latency NLP-запросов с 8 до 1.2 секунд и сэкономив 30% GPU-ресурсов</li>
-                    <li>Автоматизировала мониторинг инфраструктуры с помощью Prometheus + Grafana, сократив время реакции на инциденты с 30 до 5 минут, достигнув uptime 99.97%</li>
-                    <li>Была ментором для 7 стажеров по направлению Data Architecture; 2 приняты в штат, 2 получили офферы от других компаний</li>
+                    <li>Optimized DWH architecture (PostgreSQL + ClickHouse), reducing aggregate report execution time from 15 minutes to 90 seconds (10x improvement)</li>
+                    <li>Developed and maintained 15+ Airflow DAGs achieving 99.9% success rate with automated retry and Telegram alerts</li>
+                    <li>Built CI/CD pipeline on GitLab CI automating Docker builds, Kubernetes deployments, DB backups - eliminating 85% of manual operations</li>
+                    <li>Implemented real-time CDC replication PostgreSQL → Kafka via Debezium, improving data freshness 5x</li>
+                    <li>Created Python ETL parsers with Pandas, improving raw data processing speed 3x while reducing RAM usage by 40%</li>
+                    <li>Integrated Hugging Face LLM into data pipeline via FastAPI, reducing NLP request latency from 8 to 1.2 seconds and saving 30% GPU resources</li>
+                    <li>Automated infrastructure monitoring with Prometheus + Grafana, reducing incident response time from 30 to 5 minutes, achieving 99.97% uptime</li>
+                    <li>Mentored 7 interns in Data Architecture; 2 hired full-time, 2 received offers from other companies</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Образование</h2>
+            <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
 
             <div class="education-item">
                 <div class="edu-header">
                     <div>
-                        <div class="edu-title">Магистратура</div>
-                        <div class="edu-university">Тюменский индустриальный университет</div>
+                        <div class="edu-title">Master's Degree</div>
+                        <div class="edu-university">Tyumen Industrial University</div>
                     </div>
-                    <div class="edu-date">До 2027</div>
+                    <div class="edu-date">Until 2027</div>
                 </div>
-                <p>Нейросетевые технологии в автоматизированных системах управления (09.04.01)</p>
+                <p>Neural Network Technologies in Automated Control Systems (09.04.01)</p>
             </div>
 
             <div class="education-item">
                 <div class="edu-header">
                     <div>
-                        <div class="edu-title">Бакалавриат</div>
-                        <div class="edu-university">Академия труда и социальных отношений</div>
+                        <div class="edu-title">Bachelor's Degree</div>
+                        <div class="edu-university">Academy of Labor and Social Relations</div>
                     </div>
                     <div class="edu-date">2024</div>
                 </div>
-                <p>Прикладная информатика (09.03.03)</p>
+                <p>Applied Informatics (09.03.03)</p>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-certificate"></i> Повышение квалификации</h2>
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Professional Development</h2>
             <ul>
-                <li><strong>Архитектор данных</strong> — ООО "1Т" (2024)</li>
-                <li><strong>Data Engineer</strong> — ООО "1Т" (2023, с отличием)</li>
-                <li><strong>Data Science</strong> — Школа 21 Сбер, МГТУ им. Баумана (2023)</li>
-                <li><strong>Технический аналитик</strong> — ООО "1Т" (2023, с отличием)</li>
+                <li><strong>Data Architect</strong> — OOO "1T" (2024)</li>
+                <li><strong>Data Engineer</strong> — OOO "1T" (2023, with honors)</li>
+                <li><strong>Data Science</strong> — School 21 Sber, Bauman Moscow State Technical University (2023)</li>
+                <li><strong>Technical Analyst</strong> — OOO "1T" (2023, with honors)</li>
             </ul>
         </div>
 
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-code"></i> Навыки</h2>
+            <h2 class="section-title"><i class="fas fa-code"></i> Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h4>Data Engineering</h4>
@@ -471,11 +471,11 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4>BI & Аналитика</h4>
+                    <h4>BI & Analytics</h4>
                     <div class="skill-list">
                         <span class="skill-item">Apache Superset</span>
                         <span class="skill-item">Qlik Sense</span>
-                        <span class="skill-item">SQL (продвинутый)</span>
+                        <span class="skill-item">SQL (Advanced)</span>
                         <span class="skill-item">Window Functions</span>
                         <span class="skill-item">CTE</span>
                     </div>
@@ -492,7 +492,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4>Мониторинг и логирование</h4>
+                    <h4>Monitoring & Logging</h4>
                     <div class="skill-list">
                         <span class="skill-item">Prometheus</span>
                         <span class="skill-item">Grafana</span>
@@ -501,7 +501,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4>Языки программирования</h4>
+                    <h4>Programming Languages</h4>
                     <div class="skill-list">
                         <span class="skill-item">Python</span>
                         <span class="skill-item">Bash</span>
@@ -522,102 +522,102 @@
         </div>
 
         <div class="section">
-            <h2 class="section-title"><i class="fa-solid fa-person-dress"></i> Обо мне</h2>
+            <h2 class="section-title"><i class="fa-solid fa-person-dress"></i> About Me</h2>
             <div class="about-me">
-                Мне интересно все, что связано с цифрами и данными. Обладаю организаторскими способностями и лидерскими качествами. Придерживаюсь концепции "Lifelong learning" — непрерывное овладение новыми навыками и знаниями. Прекрасно адаптируюсь, отлично работаю как в команде "на результат", так и над персональными задачами. Неконфликтна. Есть сын (2020 г.р.).
-
-                <p style="margin-top: 15px;"><strong>Методологии и soft skills:</strong></p>
+                I'm interested in everything related to numbers and data. I possess organizational skills and leadership qualities. I adhere to the "Lifelong learning" concept - continuously acquiring new skills and knowledge. I adapt well and work excellently both in team settings focused on results and on individual tasks. I'm non-confrontational. I have a son (born 2020).
+                
+                <p style="margin-top: 15px;"><strong>Methodologies & Soft Skills:</strong></p>
                 <ul style="padding-left: 20px; margin-top: 10px;">
-                    <li>Работала по методологии Agile / SCRUM — участвовала в планировании, дейли, ретро; умею декомпозировать задачи и соблюдать сроки</li>
-                    <li>Документировала процессы и архитектуру в Confluence — поддерживала актуальность по рабочему процессу</li>
-                    <li>Имею опыт менторства и обратной связи — умею объяснять сложные технические концепции доступно, поддерживаю мотивацию и развитие</li>
-                    <li>Ответственна, проактивна, ориентирована на результат — всегда ищу, где можно улучшить, автоматизировать или ускорить</li>
+                    <li>Experience working with Agile/SCRUM methodology - participated in planning, daily standups, retrospectives</li>
+                    <li>Documented processes and architecture in Confluence</li>
+                    <li>Mentoring experience and feedback skills</li>
+                    <li>Responsible, proactive, result-oriented</li>
                 </ul>
-
-                <p style="margin-top: 15px;"><strong>Ценность для команды:</strong> Я строю не просто пайплайны — я создаю надежную, масштабируемую и наблюдаемую инфраструктуру данных, которая позволяет бизнесу принимать решения быстрее, а командам — тратить меньше времени на «тушение пожаров». Мои решения измеримы — в скорости, стабильности и экономии ресурсов.</p>
-
-                <p style="margin-top: 15px;">Готова к собеседованиям, тестовым заданиям и обсуждению кейсов.</p>
+                
+                <p style="margin-top: 15px;"><strong>Value to the team:</strong> I don't just build pipelines - I create reliable, scalable, and observable data infrastructure that enables businesses to make faster decisions while teams spend less time "fighting fires." My solutions are measurable in speed, stability, and resource efficiency.</p>
+                
+                <p style="margin-top: 15px;">Ready for interviews, technical assignments, and case discussions.</p>
             </div>
         </div>
 
-        <!-- 📜 Дипломы и сертификаты -->
+        <!-- 📜 Diplomas and Certificates -->
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-certificate"></i> Дипломы и сертификаты</h2>
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Diplomas and Certificates</h2>
             <div class="certificates-horizontal">
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/diploma_ATiSO.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/diploma_ATiSO.jpg" alt="Диплом АТиСО" class="certificate-img-horizontal landscape">
-                        <div class="certificate-caption-horizontal">Диплом Академии труда и соц. отношений</div>
+                        <img src="./pictures/diploma_ATiSO.jpg" alt="Diploma ATiSO" class="certificate-img-horizontal landscape">
+                        <div class="certificate-caption-horizontal">Diploma - Academy of Labor and Social Relations</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/cert_data_engineer.jpeg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/cert_data_engineer.jpeg" alt="Сертификат Data Engineer" class="certificate-img-horizontal landscape">
-                        <div class="certificate-caption-horizontal">Data Engineer — ООО "1Т"</div>
+                        <img src="./pictures/cert_data_engineer.jpeg" alt="Data Engineer Certificate" class="certificate-img-horizontal landscape">
+                        <div class="certificate-caption-horizontal">Data Engineer — OOO "1T"</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/cert_baumana.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/cert_baumana.jpg" alt="Сертификат МГТУ им. Баумана" class="certificate-img-horizontal landscape">
-                        <div class="certificate-caption-horizontal">Data Science — МГТУ им. Баумана</div>
+                        <img src="./pictures/cert_baumana.jpg" alt="Bauman University Certificate" class="certificate-img-horizontal landscape">
+                        <div class="certificate-caption-horizontal">Data Science — Bauman Moscow State Technical University</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/cert_devops.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/cert_devops.jpg" alt="Сертификат DevOps" class="certificate-img-horizontal landscape">
-                        <div class="certificate-caption-horizontal">DevOps — ООО "1Т"</div>
+                        <img src="./pictures/cert_devops.jpg" alt="DevOps Certificate" class="certificate-img-horizontal landscape">
+                        <div class="certificate-caption-horizontal">DevOps — OOO "1T"</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/cert_tech_analyst.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/cert_tech_analyst.jpg" alt="Сертификат Технический аналитик" class="certificate-img-horizontal landscape">
-                        <div class="certificate-caption-horizontal">Технический аналитик — ООО "1Т"</div>
+                        <img src="./pictures/cert_tech_analyst.jpg" alt="Technical Analyst Certificate" class="certificate-img-horizontal landscape">
+                        <div class="certificate-caption-horizontal">Technical Analyst — OOO "1T"</div>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- 📄 Другие документы -->
+        <!-- 📄 Other Documents -->
         <div class="section">
-            <h2 class="section-title"><i class="fas fa-file-alt"></i> Другие документы</h2>
+            <h2 class="section-title"><i class="fas fa-file-alt"></i> Other Documents</h2>
             <div class="certificates-horizontal">
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/certificate_competition.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/certificate_competition.jpg" alt="Сертификат конкурса" class="certificate-img-horizontal portrait">
-                        <div class="certificate-caption-horizontal">Диплом финалиста конкурса "ЛЦТ"</div>
+                        <img src="./pictures/certificate_competition.jpg" alt="Competition Certificate" class="certificate-img-horizontal portrait">
+                        <div class="certificate-caption-horizontal">Finalist Certificate - "LCT" Competition</div>
                     </a>
                 </div>
                 <div class="certificate-item-horizontal">
                     <a href="./pictures/rg_newspaper.jpg" target="_blank" class="certificate-link-horizontal">
-                        <img src="./pictures/rg_newspaper.jpg" alt="Статья в газете" class="certificate-img-horizontal portrait">
-                        <div class="certificate-caption-horizontal">Российская газета, "Неделя", 19.06.2024 г.</div>
+                        <img src="./pictures/rg_newspaper.jpg" alt="Newspaper Article" class="certificate-img-horizontal portrait">
+                        <div class="certificate-caption-horizontal">Russian Newspaper, "Nedelya", 19.06.2024</div>
                     </a>
                 </div>
             </div>
         </div>
 
         <div style="text-align: center; margin-top: 40px;">
-            <a href="mailto:mazavlia@mail.ru" class="btn"><i class="fas fa-envelope"></i> Связаться по email</a>
-            <p id="resume-update-date" style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Резюме обновлено <span id="current-date-ru">...</span></p>
+            <a href="mailto:mazavlia@mail.ru" class="btn"><i class="fas fa-envelope"></i> Contact via email</a>
+            <p id="resume-update-date" style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Resume updated <span id="current-date-en">...</span></p>
 
             <script>
-                // Функция для расчета возраста
+                // Calculate age based on birth date
                 function calculateAge(birthDate) {
                     const today = new Date();
                     const birth = new Date(birthDate);
                     let age = today.getFullYear() - birth.getFullYear();
                     const monthDiff = today.getMonth() - birth.getMonth();
-
+                    
                     if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
                         age--;
                     }
                     return age;
                 }
 
-                // Устанавливаем расчетный возраст
-                document.getElementById('calculated-age-ru').textContent = calculateAge('1982-04-18');
+                // Set calculated age
+                document.getElementById('calculated-age-en').textContent = calculateAge('1982-04-18');
 
-                // Функция для форматирования даты на русском языке
+                // Function for formatting date in English
                 function getCurrentDate() {
                     const now = new Date();
                     const options = {
@@ -625,11 +625,11 @@
                         month: 'long',
                         day: 'numeric'
                     };
-                    return now.toLocaleDateString('ru-RU', options);
+                    return now.toLocaleDateString('en-US', options);
                 }
 
-                // Устанавливаем текущую дату при загрузке страницы
-                document.getElementById('current-date-ru').textContent = getCurrentDate();
+                // Set current date when page loads
+                document.getElementById('current-date-en').textContent = getCurrentDate();
             </script>
         </div>
     </div>

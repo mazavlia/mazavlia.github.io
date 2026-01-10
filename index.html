@@ -947,7 +947,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate Data Engineer and DevOps Specialist with over 2.5 years of experience building scalable data pipelines and automating cloud infrastructure.</p>
+                    <p>I'm a passionate Data Engineer and DevOps Specialist with over <span id="dynamic-experience">2.5</span> years of experience building scalable data pipelines and automating cloud infrastructure.</p>
                     <p>My expertise lies at the intersection of data engineering and infrastructure automation. I design and implement end-to-end data solutions, optimize analytical databases, and migrate BI ecosystems.</p>
                     <p><strong>Methodologies & Soft Skills:</strong></p>
                     <ul style="padding-left: 20px; margin-bottom: 15px;">
@@ -961,7 +961,7 @@
                     <p>Currently pursuing my Master's degree in "Neural Network Technologies in Automated Control Systems" at Tyumen Industrial University.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Engineering">
+                    <img src="https://images.unsplash.com/photo-1677493582350-3c8f8b6a8e1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Engineering">
                 </div>
             </div>
         </div>
@@ -1347,7 +1347,7 @@
                 <a href="https://vk.com/mazavlia" target="_blank"><i class="fab fa-vk"></i></a>
                 <a href="https://github.com/mazavlia" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            <p>© 2025 Marina Zaporozhets. All rights reserved.</p>
+            <p>© 2026 Marina Zaporozhets. All rights reserved.</p>
             <p>Data Engineer | DevOps Engineer | BI Systems Architect</p>
         </div>
     </footer>
@@ -1366,8 +1366,34 @@
             return age;
         }
 
+        // Calculate professional experience from start date
+        function calculateExperience(startDate) {
+            const today = new Date();
+            const start = new Date(startDate);
+
+            let years = today.getFullYear() - start.getFullYear();
+            let months = today.getMonth() - start.getMonth();
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Add decimal part for months
+            const totalMonths = years * 12 + months;
+            const experienceYears = totalMonths / 12;
+
+            // Round to 1 decimal place
+            return Math.round(experienceYears * 10) / 10;
+        }
+
         // Set calculated age
         document.getElementById('calculated-age').textContent = calculateAge('1982-04-18');
+
+        // Set dynamic experience (starting from June 2023 at 1T)
+        const experienceYears = calculateExperience('2023-06-01');
+        document.getElementById('dynamic-experience').textContent = experienceYears;
+        document.getElementById('experience').textContent = experienceYears;
 
         // Typing animation
         const texts = [
@@ -1410,7 +1436,7 @@
         // Start the typing animation
         setTimeout(type, 1000);
 
-        // Animate stats counting - FIXED: Experience now shows 2.5 instead of counting up
+        // Animate stats counting
         function animateValue(id, start, end, duration, suffix = "+") {
             let obj = document.getElementById(id);
             let range = end - start;
@@ -1418,9 +1444,9 @@
             let increment = end > start ? 1 : -1;
             let stepTime = Math.abs(Math.floor(duration / range));
 
-            // For experience (2.5 years), just set it directly
+            // For experience, use the calculated value directly
             if (id === "experience") {
-                obj.innerHTML = "2.5" + suffix;
+                obj.innerHTML = experienceYears;
                 return;
             }
 
@@ -1438,7 +1464,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     animateValue("projects-count", 0, 15, 2000);
-                    animateValue("experience", 0, 2.5, 2000, "");
+                    animateValue("experience", 0, experienceYears, 2000, "");
                     animateValue("technologies", 0, 25, 2000);
                     animateValue("certificates", 0, 7, 2000);
                     observer.disconnect();
