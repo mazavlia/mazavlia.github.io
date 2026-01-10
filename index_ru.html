@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marina Zaporozhets - Data Engineer Portfolio</title>
+    <title>Марина Запорожец - Портфолио Data Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
@@ -893,13 +893,13 @@
             <nav>
                 <div class="logo">MZ</div>
                 <div class="nav-links">
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about">Обо мне</a>
+                    <a href="#skills">Навыки</a>
+                    <a href="#projects">Проекты</a>
+                    <a href="#contact">Контакты</a>
                     <div class="language-switcher-header">
-                        <a href="./index_ru.html">
-                            <i class="fas fa-globe"></i> Русский
+                        <a href="./index.html">
+                            <i class="fas fa-globe"></i> English
                         </a>
                     </div>
                 </div>
@@ -910,39 +910,39 @@
     <section class="hero">
         <div class="hero-content">
             <div class="profile-container">
-                <img src="./pictures/profile.jpg" alt="Marina Zaporozhets" class="profile-img">
+                <img src="./pictures/profile.jpg" alt="Марина Запорожец" class="profile-img">
             </div>
-            <h1>Marina Zaporozhets</h1>
+            <h1>Марина Запорожец</h1>
             <div class="typing-text" id="typing"></div>
             <p>Data Engineer & DevOps Specialist</p>
 
             <div>
-                <a href="https://github.com/mazavlia" class="btn"><i class="fab fa-github"></i> GitHub Profile</a>
-                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact Me</a>
+                <a href="https://github.com/mazavlia" class="btn"><i class="fab fa-github"></i> GitHub Профиль</a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Связаться</a>
             </div>
 
             <div class="data-pipeline-animation" id="pipelineAnim">
                 <div class="pipeline-container" id="pipelineContainer">
                     <div class="pipeline-stage source" data-name="PostgreSQL">
                         <div class="icon"><i class="fas fa-database"></i></div>
-                        <div class="label">Source</div>
+                        <div class="label">Источник</div>
                         <div class="status"></div>
                     </div>
                     <div class="pipeline-connector" id="connector1"></div>
                     <div class="pipeline-stage airflow" data-name="Airflow DAG">
                         <div class="icon"><i class="fas fa-project-diagram"></i></div>
-                        <div class="label">Orchestrate</div>
+                        <div class="label">Оркестрация</div>
                         <div class="status"></div>
                         <div class="dag-nodes">
-                            <div class="dag-node" id="node1">Extract</div>
-                            <div class="dag-node" id="node2">Transform</div>
-                            <div class="dag-node" id="node3">Load</div>
+                            <div class="dag-node" id="node1">Извлечение</div>
+                            <div class="dag-node" id="node2">Трансформация</div>
+                            <div class="dag-node" id="node3">Загрузка</div>
                         </div>
                     </div>
                     <div class="pipeline-connector" id="connector2"></div>
                     <div class="pipeline-stage spark" data-name="Spark Job">
                         <div class="icon"><i class="fas fa-fire"></i></div>
-                        <div class="label">Process</div>
+                        <div class="label">Обработка</div>
                         <div class="status"></div>
                         <div class="cpu-bars">
                             <div class="cpu-bar" style="--height: 30%;"></div>
@@ -953,39 +953,39 @@
                     <div class="pipeline-connector" id="connector3"></div>
                     <div class="pipeline-stage warehouse" data-name="ClickHouse">
                         <div class="icon"><i class="fas fa-warehouse"></i></div>
-                        <div class="label">Warehouse</div>
+                        <div class="label">Хранилище</div>
                         <div class="status"></div>
-                        <div class="rows-counter">0 rows</div>
+                        <div class="rows-counter">0 строк</div>
                     </div>
                 </div>
 
                 <div class="pipeline-monitor">
-                    <div class="monitor-header">Live System Metrics</div>
+                    <div class="monitor-header">Метрики системы в реальном времени</div>
                     <div class="metrics">
-                        <div class="metric">Latency: <span id="latency">120ms</span></div>
-                        <div class="metric">Throughput: <span id="throughput">450 msg/s</span></div>
-                        <div class="metric">Errors: <span id="errors">0</span></div>
+                        <div class="metric">Задержка: <span id="latency">120мс</span></div>
+                        <div class="metric">Пропускная способность: <span id="throughput">450 сообщ/с</span></div>
+                        <div class="metric">Ошибки: <span id="errors">0</span></div>
                     </div>
                 </div>
 
                 <div class="pipeline-cicd">
                     <div class="cicd-pipeline">
                         <div class="cicd-stage" id="git">git push</div>
-                        <div class="cicd-stage" id="build">build image</div>
-                        <div class="cicd-stage" id="deploy">deploy</div>
+                        <div class="cicd-stage" id="build">сборка образа</div>
+                        <div class="cicd-stage" id="deploy">деплой</div>
                     </div>
                 </div>
 
                 <div class="pipeline-alert" id="alert">
                     <div class="alert-icon">⚠️</div>
-                    <div class="alert-text"><b>Failed!</b></div>
-                    <div class="alert-action">Auto-Rollback...</div>
+                    <div class="alert-text"><b>Сбой!</b></div>
+                    <div class="alert-action">Авто-откат...</div>
                 </div>
 
                 <div class="pipeline-success" id="success">
                     <div class="success-icon">✅</div>
-                    <div class="success-text"><b>Success!</b></div>
-                    <div class="success-action">Data loaded to warehouse</div>
+                    <div class="success-text"><b>Успех!</b></div>
+                    <div class="success-action">Данные загружены в хранилище</div>
                 </div>
             </div>
         </div>
@@ -993,21 +993,21 @@
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Обо мне</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate Data Engineer and DevOps Specialist with over <span id="dynamic-experience">2.5</span> years of experience building scalable data pipelines and automating cloud infrastructure.</p>
-                    <p>My expertise lies at the intersection of data engineering and infrastructure automation. I design and implement end-to-end data solutions, optimize analytical databases, and migrate BI ecosystems.</p>
-                    <p><strong>Methodologies & Soft Skills:</strong></p>
+                    <p>Я — увлеченный Data Engineer и DevOps специалист с опытом более <span id="dynamic-experience">2.5</span> лет в создании масштабируемых data-пайплайнов и автоматизации облачной инфраструктуры.</p>
+                    <p>Моя экспертиза лежит на пересечении инженерии данных и автоматизации инфраструктуры. Я проектирую и внедряю end-to-end решения для данных, оптимизирую аналитические базы данных и мигрирую BI-экосистемы.</p>
+                    <p><strong>Методологии и soft skills:</strong></p>
                     <ul style="padding-left: 20px; margin-bottom: 15px;">
-                        <li>Experience working with Agile/SCRUM methodology - participated in planning, daily standups, retrospectives; able to decompose tasks and meet deadlines</li>
-                        <li>Documented processes and architecture in Confluence - maintained up-to-date documentation</li>
-                        <li>Mentoring experience and feedback skills - able to explain complex technical concepts clearly, support motivation and development</li>
-                        <li>Responsible, proactive, result-oriented - always looking for opportunities to improve, automate, or accelerate processes</li>
+                        <li>Опыт работы по методологии Agile/SCRUM — участие в планировании, дейли, ретро; умение декомпозировать задачи и соблюдать сроки</li>
+                        <li>Документировала процессы и архитектуру в Confluence — поддерживала актуальность документации</li>
+                        <li>Опыт менторства и навыки обратной связи — умею объяснять сложные технические концепции доступно, поддерживаю мотивацию и развитие</li>
+                        <li>Ответственна, проактивна, ориентирована на результат — всегда ищу, где можно улучшить, автоматизировать или ускорить процессы</li>
                     </ul>
-                    <p><strong>Value to the team:</strong> I don't just build pipelines - I create reliable, scalable, and observable data infrastructure that enables businesses to make faster decisions while teams spend less time "fighting fires." My solutions are measurable in speed, stability, and resource efficiency.</p>
-                    <p>I possess organizational skills and leadership qualities. I follow the "Lifelong learning" concept - continuously acquiring new skills and knowledge. I adapt well and work excellently both in team settings focused on results and on individual tasks. I'm non-confrontational.</p>
-                    <p>Currently pursuing my Master's degree in "Neural Network Technologies in Automated Control Systems" at Tyumen Industrial University.</p>
+                    <p><strong>Ценность для команды:</strong> Я строю не просто пайплайны — я создаю надежную, масштабируемую и наблюдаемую инфраструктуру данных, которая позволяет бизнесу принимать решения быстрее, а командам — тратить меньше времени на «тушение пожаров». Мои решения измеримы в скорости, стабильности и эффективности ресурсов.</p>
+                    <p>Обладаю организаторскими способностями и лидерскими качествами. Придерживаюсь концепции "Lifelong learning" — непрерывно осваиваю новые навыки и знания. Хорошо адаптируюсь и отлично работаю как в команде "на результат", так и над персональными задачами. Неконфликтна.</p>
+                    <p>В настоящее время получаю степень магистра по направлению "Нейросетевые технологии в автоматизированных системах управления" в Тюменском индустриальном университете.</p>
                 </div>
                 <div class="about-image">
                     <img src="https://images.unsplash.com/photo-1677493582350-3c8f8b6a8e1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Engineering">
@@ -1018,7 +1018,7 @@
 
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Навыки</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h3>Data Engineering</h3>
@@ -1047,7 +1047,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>BI & Cloud Platforms</h3>
+                    <h3>BI & Облачные платформы</h3>
                     <div class="skill-list">
                         <span class="skill-item">Apache Superset</span>
                         <span class="skill-item">Qlik Sense</span>
@@ -1057,7 +1057,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Languages & Tools</h3>
+                    <h3>Языки & Инструменты</h3>
                     <div class="skill-list">
                         <span class="skill-item">Python</span>
                         <span class="skill-item">SQL</span>
@@ -1074,15 +1074,15 @@
 
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Проекты</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Data Pipeline">
                     </div>
                     <div class="project-content">
-                        <h3>End-to-End ETL/ELT Pipeline</h3>
-                        <p>Built scalable pipelines integrating Oracle DWH, Excel/CSV files into ClickHouse, reducing report preparation time from hours to minutes.</p>
+                        <h3>End-to-End ETL/ELT Пайплайн</h3>
+                        <p>Построение масштабируемых пайплайнов, интегрирующих данные из Oracle DWH, Excel/CSV файлов в ClickHouse, сокращение времени подготовки отчетов с часов до минут.</p>
                         <div class="project-tags">
                             <span class="project-tag">ClickHouse</span>
                             <span class="project-tag">Airflow</span>
@@ -1096,13 +1096,13 @@
                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cloud Infrastructure">
                     </div>
                     <div class="project-content">
-                        <h3>BI Migration Project</h3>
-                        <p>Migrated BI reports from Qlik Sense to Apache Superset, maintaining business logic while reducing licensing costs and accelerating new report deployment by 40%.</p>
+                        <h3>Проект миграции BI</h3>
+                        <p>Миграция BI-отчетов из Qlik Sense в Apache Superset с сохранением бизнес-логики, сокращением лицензионных затрат и ускорением развертывания новых отчетов на 40%.</p>
                         <div class="project-tags">
                             <span class="project-tag">Superset</span>
                             <span class="project-tag">Qlik Sense</span>
                             <span class="project-tag">BI</span>
-                            <span class="project-tag">Analytics</span>
+                            <span class="project-tag">Аналитика</span>
                         </div>
                     </div>
                 </div>
@@ -1111,13 +1111,13 @@
                         <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="ML Deployment">
                     </div>
                     <div class="project-content">
-                        <h3>Infrastructure Automation</h3>
-                        <p>Built CI/CD pipeline on GitLab CI automating Docker builds, Kubernetes deployments, DB backups, eliminating 85% of manual operations.</p>
+                        <h3>Автоматизация инфраструктуры</h3>
+                        <p>Построение CI/CD пайплайна на GitLab CI с автоматизацией сборки Docker-образов, деплоя в Kubernetes, бэкапов БД, устранение 85% ручных операций.</p>
                         <div class="project-tags">
                             <span class="project-tag">GitLab CI</span>
                             <span class="project-tag">Kubernetes</span>
                             <span class="project-tag">Docker</span>
-                            <span class="project-tag">Automation</span>
+                            <span class="project-tag">Автоматизация</span>
                         </div>
                     </div>
                 </div>
@@ -1130,19 +1130,19 @@
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number" id="projects-count">15+</div>
-                    <div class="stat-label">Projects Completed</div>
+                    <div class="stat-label">Завершенных проектов</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="experience">2.5</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-label">Года опыта</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="technologies">25+</div>
-                    <div class="stat-label">Technologies</div>
+                    <div class="stat-label">Технологий</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number" id="certificates">7+</div>
-                    <div class="stat-label">Certificates</div>
+                    <div class="stat-label">Сертификатов</div>
                 </div>
             </div>
         </div>
@@ -1150,10 +1150,10 @@
 
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
+            <h2 class="section-title">Контакты</h2>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Get In Touch</h3>
+                    <h3>Свяжитесь со мной</h3>
                     <div class="contact-details">
                         <div class="contact-detail">
                             <i class="fas fa-envelope"></i>
@@ -1174,31 +1174,31 @@
                     </div>
                 </div>
                 <div class="contact-form resume-section">
-                    <h3><i class="fas fa-file-alt"></i> Resume</h3>
+                    <h3><i class="fas fa-file-alt"></i> Резюме</h3>
 
                     <div class="resume-cta-buttons">
-                        <a href="./resume_en.html" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Open Full Resume (English)</a>
-                        <a href="./resume.html" class="btn btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> Резюме на русском языке</a>
+                        <a href="./resume.html" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> Открыть полное резюме </a>
+                        <a href="./resume_en.html" class="btn btn-outline" target="_blank"><i class="fas fa-file-pdf"></i> English resume</a>
                     </div>
 
                     <div class="resume-preview-card">
                         <!-- Basic Information -->
                         <div class="resume-section-preview">
-                            <h5><i class="fas fa-user"></i> Basic Information</h5>
-                            <p><strong>Name:</strong> Marina Zaporozhets</p>
-                            <p><strong>Specialization:</strong> Data Engineer & DevOps Specialist</p>
-                            <p><strong>Age:</strong> <span id="calculated-age">...</span> years</p>
-                            <p><strong>Available for:</strong> Remote work, relocation</p>
-                            <p><strong>Expected salary:</strong> from 250,000 ₽ net</p>
+                            <h5><i class="fas fa-user"></i> Основная информация</h5>
+                            <p><strong>Имя:</strong> Марина Запорожец</p>
+                            <p><strong>Специализация:</strong> Data Engineer & DevOps Specialist</p>
+                            <p><strong>Возраст:</strong> <span id="calculated-age">...</span> года</p>
+                            <p><strong>Доступна для:</strong> Удаленная работа, релокация</p>
+                            <p><strong>Желаемая зарплата:</strong> от 250 000 ₽ на руки</p>
                         </div>
 
                         <!-- Experience Preview -->
                         <div class="resume-section-preview">
-                            <h5><i class="fas fa-briefcase"></i> Current Work</h5>
+                            <h5><i class="fas fa-briefcase"></i> Текущая работа</h5>
                             <div class="job-preview">
-                                <div class="job-title-preview">Data Engineer / BI Systems Developer</div>
-                                <div class="job-company-preview">Monetka IT</div>
-                                <div class="job-date-preview">October 2025 — Present</div>
+                                <div class="job-title-preview">Data Engineer / Разработчик BI-систем</div>
+                                <div class="job-company-preview">Монетка ИТ</div>
+                                <div class="job-date-preview">Октябрь 2025 — настоящее время</div>
                                 <div class="job-tags-preview">
                                     <span class="preview-tag">ClickHouse</span>
                                     <span class="preview-tag">Airflow</span>
@@ -1209,11 +1209,11 @@
                         </div>
 
                         <div class="resume-section-preview">
-                            <h5><i class="fas fa-briefcase"></i> Previous Experience</h5>
+                            <h5><i class="fas fa-briefcase"></i> Предыдущий опыт</h5>
                             <div class="job-preview">
                                 <div class="job-title-preview">Data Engineer</div>
-                                <div class="job-company-preview">OOO "1T"</div>
-                                <div class="job-date-preview">June 2023 — August 2025</div>
+                                <div class="job-company-preview">ООО "1Т"</div>
+                                <div class="job-date-preview">Июнь 2023 — Август 2025</div>
                                 <div class="job-tags-preview">
                                     <span class="preview-tag">Airflow</span>
                                     <span class="preview-tag">Kubernetes</span>
@@ -1225,7 +1225,7 @@
 
                         <!-- Skills Preview -->
                         <div class="resume-section-preview">
-                            <h5><i class="fas fa-code"></i> Key Skills</h5>
+                            <h5><i class="fas fa-code"></i> Ключевые навыки</h5>
                             <div class="skills-preview-tags">
                                 <span class="preview-skill-tag">Python</span>
                                 <span class="preview-skill-tag">Airflow</span>
@@ -1240,22 +1240,22 @@
 
                         <!-- Education Preview -->
                         <div class="resume-section-preview">
-                            <h5><i class="fas fa-graduation-cap"></i> Education</h5>
+                            <h5><i class="fas fa-graduation-cap"></i> Образование</h5>
                             <div class="edu-preview">
-                                <div class="edu-title-preview">Master's Degree</div>
-                                <div class="edu-university-preview">Tyumen Industrial University</div>
-                                <div class="edu-date-preview">Until 2027</div>
+                                <div class="edu-title-preview">Магистратура</div>
+                                <div class="edu-university-preview">Тюменский индустриальный университет</div>
+                                <div class="edu-date-preview">До 2027</div>
                             </div>
                             <div class="edu-preview">
-                                <div class="edu-title-preview">Bachelor's Degree</div>
-                                <div class="edu-university-preview">Academy of Labor and Social Relations</div>
+                                <div class="edu-title-preview">Бакалавриат</div>
+                                <div class="edu-university-preview">Академия труда и социальных отношений</div>
                                 <div class="edu-date-preview">2024</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="resume-contact-cta">
-                        <a href="mailto:mazavlia@mail.ru" class="btn btn-outline"><i class="fas fa-envelope"></i> Email me</a>
+                        <a href="mailto:mazavlia@mail.ru" class="btn btn-outline"><i class="fas fa-envelope"></i> Написать мне</a>
                     </div>
                 </div>
 
@@ -1405,8 +1405,8 @@
                 <a href="https://vk.com/mazavlia" target="_blank"><i class="fab fa-vk"></i></a>
                 <a href="https://github.com/mazavlia" target="_blank"><i class="fab fa-github"></i></a>
             </div>
-            <p>© 2026 Marina Zaporozhets. All rights reserved.</p>
-            <p>Data Engineer | DevOps Engineer | BI Systems Architect</p>
+            <p>© 2026 Марина Запорожец. Все права защищены.</p>
+            <p>Data Engineer | DevOps Engineer | Архитектор BI-систем</p>
         </div>
     </footer>
 
@@ -1455,10 +1455,10 @@
 
         // Typing animation
         const texts = [
-            "Building scalable data pipelines",
-            "Automating cloud infrastructure",
-            "Optimizing ClickHouse databases",
-            "Migrating BI ecosystems"
+            "Создание масштабируемых data-пайплайнов",
+            "Автоматизация облачной инфраструктуры",
+            "Оптимизация баз данных ClickHouse",
+            "Миграция BI-экосистем"
         ];
         let textIndex = 0;
         let charIndex = 0;
@@ -1653,12 +1653,12 @@
                 setTimeout(() => {
                     stages[3].classList.add('success');
                     rowCount += Math.floor(1000 + Math.random() * 5000);
-                    rowsCounter.textContent = rowCount.toLocaleString() + ' rows';
+                    rowsCounter.textContent = rowCount.toLocaleString() + ' строк';
                 }, 3000);
 
                 // Metrics
-                latency.textContent = Math.floor(80 + Math.random() * 100) + 'ms';
-                throughput.textContent = Math.floor(300 + Math.random() * 400) + ' msg/s';
+                latency.textContent = Math.floor(80 + Math.random() * 100) + 'мс';
+                throughput.textContent = Math.floor(300 + Math.random() * 400) + ' сообщ/с';
 
                 // CI/CD animation
                 if (Math.random() > 0.6) {
